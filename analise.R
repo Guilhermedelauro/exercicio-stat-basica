@@ -13,3 +13,6 @@ boxplot <- eleicao%>%
   group_by(candidato)%>%
   ggplot(aes(x=candidato, y=votos)) +geom_boxplot()
 print(boxplot)
+
+soma<- eleicao%>%
+  summarise(sum(votos))
