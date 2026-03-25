@@ -8,3 +8,8 @@ grafico_barras <- eleicao %>%
   group_by(candidato)%>%
   ggplot(aes(x=candidato, y=votos)) +geom_col() 
 print(grafico_barras)
+
+boxplot <- eleicao%>%
+  group_by(candidato)%>%
+  ggplot(aes(x=candidato, y=votos)) +geom_boxplot()
+print(boxplot)
